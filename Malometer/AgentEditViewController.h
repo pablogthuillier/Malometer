@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "DismissProtocol.h"
 
+@class Agent;
+
 @interface AgentEditViewController : UIViewController
 
-@property (strong, nonatomic) id myAgent;
+@property (strong, nonatomic) Agent *myAgent;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UILabel *assessmentLabel;

@@ -7,8 +7,8 @@
 //
 
 #import "AgentsViewController.h"
-
 #import "AgentEditViewController.h"
+#import "Agent.h"
 
 @interface AgentsViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -119,7 +119,7 @@ static NSString *agentEntityName = @"Agent";
         [self.managedObjectContext.undoManager beginUndoGrouping];
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
         NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-        NSManagedObject *agent = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+        Agent *agent = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
         [detailsVC setMyAgent:agent];
         
         
@@ -142,6 +142,7 @@ static NSString *agentEntityName = @"Agent";
     
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView setNeedsDisplay];
     
     
     
@@ -250,8 +251,8 @@ static NSString *agentEntityName = @"Agent";
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"name"] description];
+    Agent *agent = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = agent.name;
 }
 
 @end
