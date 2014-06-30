@@ -16,8 +16,8 @@
 		21C3855119616713006997E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3855019616713006997E6 /* AppDelegate.m */; };
 		21C3855419616713006997E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C3855219616713006997E6 /* Main.storyboard */; };
 		21C3855719616713006997E6 /* Malometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21C3855519616713006997E6 /* Malometer.xcdatamodeld */; };
-		21C3855A19616713006997E6 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3855919616713006997E6 /* MasterViewController.m */; };
-		21C3855D19616713006997E6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3855C19616713006997E6 /* DetailViewController.m */; };
+		21C3855A19616713006997E6 /* AgentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3855919616713006997E6 /* AgentsViewController.m */; };
+		21C3855D19616713006997E6 /* AgentEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C3855C19616713006997E6 /* AgentEditViewController.m */; };
 		21C3855F19616713006997E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C3855E19616713006997E6 /* Images.xcassets */; };
 		21C3856619616713006997E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C3856519616713006997E6 /* XCTest.framework */; };
 		21C3856719616713006997E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C3853E19616713006997E6 /* Foundation.framework */; };
@@ -52,10 +52,10 @@
 		21C3855019616713006997E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		21C3855319616713006997E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21C3855619616713006997E6 /* Malometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Malometer.xcdatamodel; sourceTree = "<group>"; };
-		21C3855819616713006997E6 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		21C3855919616713006997E6 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		21C3855B19616713006997E6 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		21C3855C19616713006997E6 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		21C3855819616713006997E6 /* AgentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgentsViewController.h; sourceTree = "<group>"; };
+		21C3855919616713006997E6 /* AgentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgentsViewController.m; sourceTree = "<group>"; };
+		21C3855B19616713006997E6 /* AgentEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgentEditViewController.h; sourceTree = "<group>"; };
+		21C3855C19616713006997E6 /* AgentEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgentEditViewController.m; sourceTree = "<group>"; };
 		21C3855E19616713006997E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		21C3856419616713006997E6 /* MalometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MalometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C3856519616713006997E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -127,10 +127,10 @@
 				21C3854F19616713006997E6 /* AppDelegate.h */,
 				21C3855019616713006997E6 /* AppDelegate.m */,
 				21C3855219616713006997E6 /* Main.storyboard */,
-				21C3855819616713006997E6 /* MasterViewController.h */,
-				21C3855919616713006997E6 /* MasterViewController.m */,
-				21C3855B19616713006997E6 /* DetailViewController.h */,
-				21C3855C19616713006997E6 /* DetailViewController.m */,
+				21C3855819616713006997E6 /* AgentsViewController.h */,
+				21C3855919616713006997E6 /* AgentsViewController.m */,
+				21C3855B19616713006997E6 /* AgentEditViewController.h */,
+				21C3855C19616713006997E6 /* AgentEditViewController.m */,
 				2113869A196197A600D5279C /* DismissProtocol.h */,
 				21C3855E19616713006997E6 /* Images.xcassets */,
 				21C3855519616713006997E6 /* Malometer.xcdatamodeld */,
@@ -265,8 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C3855D19616713006997E6 /* DetailViewController.m in Sources */,
-				21C3855A19616713006997E6 /* MasterViewController.m in Sources */,
+				21C3855D19616713006997E6 /* AgentEditViewController.m in Sources */,
+				21C3855A19616713006997E6 /* AgentsViewController.m in Sources */,
 				21C3855119616713006997E6 /* AppDelegate.m in Sources */,
 				21C3854D19616713006997E6 /* main.m in Sources */,
 				21C3855719616713006997E6 /* Malometer.xcdatamodeld in Sources */,

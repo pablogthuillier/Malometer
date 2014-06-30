@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 #import <CoreData/CoreData.h>
-#import "DetailViewController.h"
+#import "AgentEditViewController.h"
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, DismissProtocol>
+@interface AgentsViewController : UITableViewController <NSFetchedResultsControllerDelegate, DismissProtocol>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

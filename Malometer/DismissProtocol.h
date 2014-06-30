@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-@class DetailViewController;
+@class AgentEditViewController;
 
 @protocol DismissProtocol <NSObject>
 
-- (void)detailsViewController:(DetailViewController *)viewController modifiedData:(BOOL)modified;
+- (void)detailsViewController:(AgentEditViewController *)viewController modifiedData:(BOOL)modified;
 
 @end

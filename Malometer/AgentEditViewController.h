@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DismissProtocol.h"
 
-@interface DetailViewController : UIViewController
+@interface AgentEditViewController : UIViewController
 
 @property (strong, nonatomic) id myAgent;
 

@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 IronHack. All rights reserved.
 //
 
-#import "MasterViewController.h"
+#import "AgentsViewController.h"
 
-#import "DetailViewController.h"
+#import "AgentEditViewController.h"
 
-@interface MasterViewController ()
+@interface AgentsViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
-@implementation MasterViewController
+@implementation AgentsViewController
 
 static NSString *detailsSegue = @"CreateAgent";
 static NSString *agentEntityName = @"Agent";
@@ -112,7 +112,7 @@ static NSString *agentEntityName = @"Agent";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:detailsSegue]) {
-        DetailViewController *detailsVC = (DetailViewController *)[[segue destinationViewController] topViewController];
+        AgentEditViewController *detailsVC = (AgentEditViewController *)[[segue destinationViewController] topViewController];
         detailsVC.delegate = self;
         
         
@@ -129,7 +129,7 @@ static NSString *agentEntityName = @"Agent";
 
 #pragma mark - Delegate methods
 
-- (void)detailsViewController:(DetailViewController *)viewController modifiedData:(BOOL)modified {
+- (void)detailsViewController:(AgentEditViewController *)viewController modifiedData:(BOOL)modified {
     
     [self.managedObjectContext.undoManager endUndoGrouping];
     if(modified){

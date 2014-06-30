@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 IronHack. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "AgentEditViewController.h"
 
-@interface DetailViewController ()
+@interface AgentEditViewController ()
 
 
 
 - (void)configureView;
 @end
 
-@implementation DetailViewController
+@implementation AgentEditViewController
 
 NSArray *destructionPowerValues;
 NSArray *motivationValues;
