@@ -73,7 +73,13 @@
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
 - (NSManagedObjectContext *)managedObjectContext
 {
+    NSUndoManager *undo = [[NSUndoManager alloc] init];
+    [undo setLevelsOfUndo:10];
+    [undo setGroupsByEvent:NO];
+
+    
     if (_managedObjectContext != nil) {
+        [_managedObjectContext setUndoManager:undo];
         return _managedObjectContext;
     }
     
@@ -81,6 +87,7 @@
     if (coordinator != nil) {
         _managedObjectContext = [[NSManagedObjectContext alloc] init];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+        [_managedObjectContext setUndoManager:undo];
     }
     return _managedObjectContext;
 }

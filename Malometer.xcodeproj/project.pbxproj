@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2113869A196197A600D5279C /* DismissProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissProtocol.h; sourceTree = "<group>"; };
 		21C3853B19616713006997E6 /* Malometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Malometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C3853E19616713006997E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		21C3854019616713006997E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,6 +131,7 @@
 				21C3855919616713006997E6 /* MasterViewController.m */,
 				21C3855B19616713006997E6 /* DetailViewController.h */,
 				21C3855C19616713006997E6 /* DetailViewController.m */,
+				2113869A196197A600D5279C /* DismissProtocol.h */,
 				21C3855E19616713006997E6 /* Images.xcassets */,
 				21C3855519616713006997E6 /* Malometer.xcdatamodeld */,
 				21C3854719616713006997E6 /* Supporting Files */,
@@ -472,6 +474,7 @@
 				21C3857819616713006997E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C3857919616713006997E6 /* Build configuration list for PBXNativeTarget "MalometerTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +483,7 @@
 				21C3857B19616713006997E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
