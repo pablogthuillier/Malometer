@@ -62,10 +62,23 @@ static NSString *motivationAttribute = @"motivation";
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    [self displayAgentData];
     
     
+}
+
+- (void)displayAgentData {
+    self.nameField.text = self.myAgent.name;
     
+    self.destructionPowerStepper.value = [self.myAgent.destructionPower doubleValue];
+    NSUInteger destroyPower = [self.myAgent.destructionPower unsignedIntegerValue];
+    self.destructionPowerLabel.text = [destructionPowerValues objectAtIndex:destroyPower];
     
+    self.motivationStepper.value = [self.myAgent.motivation doubleValue];
+    NSUInteger motivation = [self.myAgent.motivation unsignedIntegerValue];
+    self.motivationLabel.text = [motivationValues objectAtIndex:motivation];
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -163,9 +176,20 @@ static NSString *motivationAttribute = @"motivation";
     self.assessmentLabel.text = [NSString stringWithFormat:@"%@",assessmentText];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    BOOL shouldReturn = YES;
+    if(textField == self.nameField){
+        shouldReturn = NO;
+        [textField resignFirstResponder];
+    }
+    
+    return shouldReturn;
 }
+
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+//    [super touchesBegan:touches withEvent:event];
+//    [self.view endEditing:YES];
+//}
 
 
 @end
